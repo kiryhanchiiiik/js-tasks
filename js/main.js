@@ -33,3 +33,15 @@ function charFrequency(str) {
 }
 
 console.log(charFrequency("hello"));
+
+function isPalindrome(str) {
+  const clearStr = str.toLowerCase().replace(/\s/g, "");
+
+  const reversed = clearStr.split("").reverse().join("");
+
+  return clearStr === reversed;
+}
+
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("Race car")); // true
+console.log(isPalindrome("hello")); // false

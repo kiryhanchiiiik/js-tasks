@@ -46,25 +46,39 @@
 // console.log(isPalindrome("Race car")); // true
 // console.log(isPalindrome("hello")); // false
 
-function testHoisting() {
-  console.log(a);
-  var a = 10;
+// function testHoisting() {
+//   console.log(a);
+//   var a = 10;
 
-  console.log(b);
-  let b = 20;
+//   console.log(b);
+//   let b = 20;
 
-  console.log(c);
-  const c = 30;
+//   console.log(c);
+//   const c = 30;
+// }
+
+// console.log(testHoisting()); // ReferenceError: Cannot access 'b' before initialization
+
+// console.log(sayHi());
+
+// var sayHi = function () {
+//   console.log("Привет от переменной!");
+// };
+
+// function sayHi() {
+//   console.log("Привет от функции!");
+// }
+
+function isAnagram(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+
+  const sorted1 = str1.toLowerCase().split("").sort().join("").trim();
+  const sorted2 = str2.toLowerCase().split("").sort().join("").trim();
+
+  return sorted1 === sorted2;
 }
 
-console.log(testHoisting()); // ReferenceError: Cannot access 'b' before initialization
-
-console.log(sayHi());
-
-var sayHi = function () {
-  console.log("Привет от переменной!");
-};
-
-function sayHi() {
-  console.log("Привет от функции!");
-}
+console.log(isAnagram("listen", "silent")); // true ✅
+console.log(isAnagram("hello", "world")); // false ❌

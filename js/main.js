@@ -83,12 +83,37 @@
 // console.log(isAnagram("listen", "silent")); // true ✅
 // console.log(isAnagram("hello", "world")); // false ❌
 
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
+// function removeDuplicates(arr) {
+//   return [...new Set(arr)];
+// }
+
+// function removeDuplicates2(arr) {
+//   return arr.filter((item, i) => {
+//     return arr.indexOf(item) === i;
+//   });
+// }
+
+function groupBy(arr, key) {
+  const result = {};
+
+  arr.forEach((element) => {
+    const groupKey = element[key];
+
+    if (!result[groupKey]) {
+      result[groupKey] = [];
+    }
+
+    result[groupKey].push(element);
+  });
+
+  return result;
 }
 
-function removeDuplicates2(arr) {
-  return arr.filter((item, i) => {
-    return arr.indexOf(item) === i;
-  });
-}
+const data = [
+  { category: "fruit", name: "apple" },
+  { category: "vegetable", name: "carrot" },
+  { category: "fruit", name: "banana" },
+  { category: "vegetable", name: "celery" },
+];
+
+console.log(groupBy(data, "category"));

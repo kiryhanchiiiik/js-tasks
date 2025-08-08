@@ -86,3 +86,9 @@
 function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
+
+function removeDuplicates2(arr) {
+  return arr.filter((item, i) => {
+    return arr.indexOf(item) === i;
+  });
+}

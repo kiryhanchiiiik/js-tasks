@@ -69,16 +69,20 @@
 //   console.log("Привет от функции!");
 // }
 
-function isAnagram(str1, str2) {
-  if (str1.length !== str2.length) {
-    return false;
-  }
+// function isAnagram(str1, str2) {
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
 
-  const sorted1 = str1.toLowerCase().split("").sort().join("").trim();
-  const sorted2 = str2.toLowerCase().split("").sort().join("").trim();
+//   const sorted1 = str1.toLowerCase().split("").sort().join("").trim();
+//   const sorted2 = str2.toLowerCase().split("").sort().join("").trim();
 
-  return sorted1 === sorted2;
+//   return sorted1 === sorted2;
+// }
+
+// console.log(isAnagram("listen", "silent")); // true ✅
+// console.log(isAnagram("hello", "world")); // false ❌
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
 }
-
-console.log(isAnagram("listen", "silent")); // true ✅
-console.log(isAnagram("hello", "world")); // false ❌

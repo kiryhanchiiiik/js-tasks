@@ -93,27 +93,34 @@
 //   });
 // }
 
-function groupBy(arr, key) {
-  const result = {};
+// function groupBy(arr, key) {
+//   const result = {};
 
-  arr.forEach((element) => {
-    const groupKey = element[key];
+//   arr.forEach((element) => {
+//     const groupKey = element[key];
 
-    if (!result[groupKey]) {
-      result[groupKey] = [];
-    }
+//     if (!result[groupKey]) {
+//       result[groupKey] = [];
+//     }
 
-    result[groupKey].push(element);
-  });
+//     result[groupKey].push(element);
+//   });
 
-  return result;
+//   return result;
+// }
+
+// const data = [
+//   { category: "fruit", name: "apple" },
+//   { category: "vegetable", name: "carrot" },
+//   { category: "fruit", name: "banana" },
+//   { category: "vegetable", name: "celery" },
+// ];
+
+// console.log(groupBy(data, "category"));
+
+function reverseStr(str) {
+  return str.split("").reverse().join("");
 }
 
-const data = [
-  { category: "fruit", name: "apple" },
-  { category: "vegetable", name: "carrot" },
-  { category: "fruit", name: "banana" },
-  { category: "vegetable", name: "celery" },
-];
-
-console.log(groupBy(data, "category"));
+console.log(reverseString("hello")); // "olleh"
+console.log(reverseString("JavaScript")); // "tpircSavaJ"

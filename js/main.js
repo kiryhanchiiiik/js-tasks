@@ -118,9 +118,37 @@
 
 // console.log(groupBy(data, "category"));
 
-function reverseStr(str) {
-  return str.split("").reverse().join("");
-}
+// function reverseStr(str) {
+//   return str.split("").reverse().join("");
+// }
 
-console.log(reverseString("hello")); // "olleh"
-console.log(reverseString("JavaScript")); // "tpircSavaJ"
+// console.log(reverseString("hello")); // "olleh"
+// console.log(reverseString("JavaScript")); // "tpircSavaJ"
+
+// function hasUniqueChars(str) {
+//   return (new Set(str).size = str.length);
+// }
+
+// console.log(hasUniqueChars("abcde")); // true ✅
+// console.log(hasUniqueChars("hello")); // false ❌
+
+// function hasUniqueChars2(str) {
+//   const seen = {};
+
+//   for (let char of str) {
+//     if (seen[char]) {
+//       return false;
+//     }
+//     seen[char] = true;
+//   }
+
+//   return true;
+// }
+
+// console.log(hasUniqueChars("abcde")); // true ✅
+// console.log(hasUniqueChars("hello")); // false ❌
+
+const numbers = [4, 7, 1, 9, 12, 5, 3];
+
+const evens = numbers.filter((num) => num % 2 === 0);
+console.log(evens); // [4, 12]

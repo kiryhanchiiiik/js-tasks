@@ -158,3 +158,10 @@ console.log(doubled); // [8, 24]
 
 const sorted = doubled.sort((a, b) => a - b);
 console.log(sorted); // [8, 24]
+
+const result = numbers
+  .filter((num) => num % 2 === 0)
+  .map((num) => num * 2)
+  .sort((a, b) => a - b);
+
+console.log(result); // [8, 24]

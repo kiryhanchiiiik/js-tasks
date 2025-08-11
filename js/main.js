@@ -152,3 +152,6 @@ const numbers = [4, 7, 1, 9, 12, 5, 3];
 
 const evens = numbers.filter((num) => num % 2 === 0);
 console.log(evens); // [4, 12]
+
+const doubled = evens.map((num) => num * 2);
+console.log(doubled); // [8, 24]

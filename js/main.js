@@ -155,3 +155,6 @@ console.log(evens); // [4, 12]
 
 const doubled = evens.map((num) => num * 2);
 console.log(doubled); // [8, 24]
+
+const sorted = doubled.sort((a, b) => a - b);
+console.log(sorted); // [8, 24]
